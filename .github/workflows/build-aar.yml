@@ -25,10 +25,13 @@ jobs:
 
       - name: Build AAR
         run: ./gradlew assembleRelease
+        # 可选：添加 --stacktrace 以便调试
+        run: ./gradlew assembleRelease --stacktrace
 
       - name: Upload AAR
-        # 使用具体的 SHA 值
-        uses: actions/upload - artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: shadowsocks-android-aar
           path: app/build/outputs/aar/*.aar
+          # 如果没有文件，允许失败
+          if-no-files-found: error
