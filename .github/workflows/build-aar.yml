@@ -24,7 +24,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build AAR
-        run: ./gradlew assembleRelease
+        # run: ./gradlew assembleRelease
         # 可选：添加 --stacktrace 以便调试
         run: ./gradlew assembleRelease --stacktrace
 
