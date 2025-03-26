@@ -28,7 +28,7 @@ jobs:
 
       - name: Upload AAR
         # 使用具体的 SHA 值
-        uses: actions/upload - artifact@具体的 SHA 值
+        uses: actions/upload - artifact@v4
         with:
           name: shadowsocks-android-aar
           path: app/build/outputs/aar/*.aar
